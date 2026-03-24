@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    
+    <h1>Calculando o IMC do usuário</h1>
+
+    <script>
+        let peso = parseFloat(prompt("Quanto você pesa?"))
+        document.write("Peso: " + peso)
+
+        let altura = parseFloat(prompt("Qual é a sua altura?(Exemplo: 1.60)"))
+        document.write("<br>Altura: " + altura)
+
+        let IMC = parseFloat(peso / (altura*altura))
+        document.write("<br>IMC: " + IMC.toFixed(1))
+        
+        if(IMC < 18.5){
+            alert("Você está abaixo do peso!")
+            document.write("<br>Abaixo do peso")
+        } else if(IMC >= 18.5 && IMC <= 24.9) {
+            alert("Você está com o peso normal")
+            document.write("<br>Peso normal")
+        } else if(IMC >=25 && IMC <=29.9) {
+            alert("Você está sobrepeso")
+            document.write("<br>Sobrepeso")
+        } else if(IMC >= 30 && IMC <= 34.9) {
+            alert("Você está com Obesidade Grau I")
+            document.write("<br>Obesidade Grau I")
+        } else if(IMC >= 35 && IMC <= 39.9) {
+            alert("Você está com Obesidade Grau II")
+            document.write("<br>Obesidade Grau II")
+        } else if (IMC >40){
+            alert("Você está com Obesidade Grau III(Mórbida)")
+            document.write("<br>Obesidade Grau III(Mórbida)")
+        } else{
+            alert("Valores inválidos")
+            document.write("<br>Altura ou Peso Inválido")
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando sistema de notas</title>
+</head>
+<body>
+    
+    <h1>Testando sistema de notas</h1>
+
+    <script>
+
+        let nota1 = parseFloat(prompt("entre com a nota do primeiro bimestre"))
+        document.write("A primeira nota é: " + nota1)
+
+        let nota2 = parseFloat(prompt("entre com a nota do segundo bimestre"))
+        document.write("<br>A segunda nota é: " + nota2)
+
+        let nota3 = parseFloat(prompt("entre com a nota do terceiro bimestre"))
+        document.write("<br>A terceira nota é: " + nota3)
+
+        let nota4 = parseFloat(prompt("entre com a nota do quarto bimestre"))
+        document.write("<br>A quarta nota é: " + nota4)
+
+        let media = parseFloat((nota1 + nota2 + nota3 + nota4) / 4)
+        document.write("<br>A sua média é: " + media)
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Idade para Dias</title>
+</head>
+<body>
+    
+    <h1>Calculando sua idade em dias</h1>
+
+    <script>
+        /*Variáveis de ano, mês e dia*/
+        let dia = parseInt(prompt("Em qual dia você nasceu?"))
+        let mes = parseInt(prompt("Em qual mês você nasceu? (1-12)"))
+        let ano = parseInt(prompt("Qual é o ano do seu nascimento?"))
+
+        /*Pegando a data atual*/
+        let diaAtual = new Date().getDate()
+        let mesAtual = new Date().getMonth() + 1 /*+1 porque janeiro começa em 0*/
+        let anoAtual = new Date().getFullYear()
+
+        /*Calculando anos, meses e dias de idade*/
+        let anosVividos = anoAtual - ano
+        let mesesVividos = mesAtual - mes
+        let diasVividos = diaAtual - dia
+
+        /*Ajuste se os dias ou meses derem negativo*/
+        if(diasVividos < 0){
+            mesesVividos--
+            diasVividos += 30
+        }
+        if(mesesVividos < 0){
+            anosVividos--
+            mesesVividos += 12
+        }
+
+        /*Cálculo com valores fixos: 1 ano = 365 dias, 1 mês = 30 dias*/
+        let totalDias = (anosVividos * 365) + (mesesVividos * 30) + diasVividos
+
+        /*Exibir a idade informada*/
+        document.write("Data de Nascimento: " + dia + "/" + mes + "/" + ano)
+        document.write("<br>Idade: " + anosVividos + " anos, " + mesesVividos + " meses e " + diasVividos + " dias.")
+
+        /*Condição*/
+        if(totalDias < 0){
+            document.write("<br><br><strong>Erro:</strong> A data de nascimento não pode ser no futuro!")
+            alert("Data inválida!")
+        } else {
+            document.write("<br><br><strong>Você já viveu aproximadamente: " + totalDias + " dias!</strong>")
+            alert("Cálculo concluído: " + totalDias + " dias.")
+        }
+
+    </script>
+
+</body>
+</html>

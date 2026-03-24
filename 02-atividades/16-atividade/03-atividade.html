@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de Saldo</title>
+</head>
+<body>
+
+    <h1>Reajuste de Saldo</h1>
+
+    <script>
+        /*Informar o saldo*/
+        let saldo = parseFloat(prompt("Qual é o seu saldo?"))
+
+        /*Calcular o reajuste de 1%*/
+        let saldoReajustado = saldo * 1.01
+
+        /*Exibir os resultados*/
+        document.write("Saldo informado: R$ " + saldo)
+        document.write("<br>Saldo com reajuste de 1%: R$ " + saldoReajustado.toFixed(2).replace(".", ",")) /*Replace pega o ponto e transforma em vírgula*/
+
+    </script>
+
+</body>
+</html>

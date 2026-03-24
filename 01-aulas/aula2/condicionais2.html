@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais usando JavaScript</title>
+</head>
+<body>
+    
+    <h1>Testando comandos If - else if - else</h1>
+
+
+    <script>
+        
+        let cor = prompt("Entre com uma das cores(amarelo, vermelho ou verde): ").toLowerCase()
+        document.write("A cor é: " + cor)
+
+        /*1 sinal de = verifica o valor da variável, 2 sinais de == Compara se dois valores estão iguais e 3 sinais de === compara se dois valores são iguais e se são do mesmo tipo (número, string, booleano...)*/
+        if(cor === "verde"){
+            alert("Pode passar!")
+        } else if(cor === "amarelo"){
+            alert("Desacelere, mas pode passar")
+        }
+        else if(cor === "vermelho"){
+            alert("Pare!")
+        }
+        else {
+            alert("Cor inválida")
+        }
+    </script>
+
+</body>
+</html>
