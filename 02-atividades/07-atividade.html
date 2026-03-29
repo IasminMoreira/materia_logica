@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calorias</title>
+</head>
+<body>
+    
+    <h1>Calculadora de Calorias</h1>
+
+    <script>
+        
+        document.write("PRATOS:<br>")
+        document.write("1 - Vegetariano (180 cal)<br>")
+        document.write("2 - Peixe (230 cal)<br>")
+        document.write("3 - Frango (250 cal)<br>")
+        document.write("4 - Carne (350 cal)<br>")
+
+        document.write("<br><br>SOBREMESAS:<br>")
+        document.write("1 - Abacaxi (75 cal)<br>")
+        document.write("2 - Sorvete diet (110 cal)<br>")
+        document.write("3 - Mouse diet (170 cal)<br>")
+        document.write("4 - Mouse chocolate (200 cal)<br>")
+
+        document.write("<br><br>BEBIDAS:<br>")
+        document.write("1 - Chá (20 cal)<br>")
+        document.write("2 - Suco de laranja (70 cal)<br>")
+        document.write("3 - Suco de melão (100 cal)<br>")
+        document.write("4 - Refrigerante diet (65 cal)<br>")
+
+        let prato = parseInt(prompt("Digite o número do seu prato:"))
+        let sobremesa = parseInt(prompt("Digite o número da sua sobremesa"))
+        let bebida = parseInt(prompt("Digite o número da sua bebida"))
+        let prato1
+        let sobremesa1
+        let bebida1
+        let calprato
+        let calsobremesa
+        let calbebida
+
+
+        switch(prato){
+            case 1: prato1 = "Vegetariano"
+            calprato = 180
+            break
+            case 2: prato1 = "Peixe"
+            calprato = 230
+            break
+            case 3: prato1 = "Frango"
+            calprato = 250
+            break
+            case 4: prato1 = "Carne"
+            calprato = 350
+            break
+            default: prato1 = "Prato inexistente"
+        }
+
+        switch(sobremesa){
+            case 1: sobremesa1 = "Abacaxi"
+            calsobremesa = 75
+            break
+            case 2: sobremesa1 = "Sorvete diet"
+            calsobremesa = 110
+            break
+            case 3: sobremesa1 = "Mouse diet"
+            calsobremesa = 170
+            break
+            case 4: sobremesa1 = "Mouse chocolate"
+            calsobremesa = 200
+            break
+            default: sobremesa1 = "Sobremesa inexistente"
+        }
+
+        switch(bebida){
+            case 1: bebida1 = "Chá"
+            calbebida = 20
+            break
+            case 2: bebida1 = "Suco de Laranja"
+            calbebida = 70
+            break
+            case 3: bebida1 = "Suco de Melão"
+            calbebida = 100
+            break
+            case 4: bebida1 = "Refrigerante diet"
+            calbebida = 65
+            break
+            default: bebida1 = "Bebida inexistente"
+        }
+        
+        let refeicao = calprato + calsobremesa + calbebida
+        document.write("<br><br>Prato: " + prato1)
+        document.write("<br>Sobremesa: " + sobremesa1)
+        document.write("<br>Bebida: " + bebida1)
+        document.write("<br>Calorias consumidas: " + refeicao + " cal")
+
+    </script>
+
+</body>
+</html>
