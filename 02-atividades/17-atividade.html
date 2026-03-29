@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Calculadora de Salário</title>
 </head>
 <body>
+
+    <h1>Calculadora de Salário</h1>
     
+    <script>
+        let nome = prompt("Qual é o seu nome?")
+        let salario = parseFloat(prompt("Qual é o seu salário fixo?").replace(",", "."))
+        let vendas = parseFloat(prompt("Qual é o valor total das suas vendas do mês?").replace(",", "."))
+        let comissao = vendas * 0.15
+        let salarioFinal = salario + comissao
+
+        document.write("Nome: " + nome)
+        document.write("<br>Salário fixo: R$ " + salario.toFixed(2).replace(".", ","))
+        document.write("<br>Valor total das vendas: R$ " + vendas.toFixed(2).replace(".", ","))
+        document.write("<br>Comissão (15% das vendas): R$ " + comissao.toFixed(2).replace(".", ","))
+        document.write("<br><strong>Salário final: R$ " + salarioFinal.toFixed(2).replace(".", ",") + "</strong>")
+    </script>
+
 </body>
 </html>

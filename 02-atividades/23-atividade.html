@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Quem é maior de idade?</title>
 </head>
 <body>
+
+    <h1>Exibir quem é maior de idade</h1>
+
+    <script>
+        let Idades = 0;
+        let contadorMaiores = 0
+
+        for (let i = 1; i <= 20; i++) {
+            let idade = parseInt(prompt("Digite a idade da pessoa " + i + ":"));
+            document.write("Idade da pessoa " + i + ": " + idade + "<br>");
+            if (idade >= 18) {
+                document.write("A pessoa " + i + " é maior de idade.<br><br>");
+                contadorMaiores++;
+            } else {
+                document.write("A pessoa " + i + " é menor de idade.<br><br>");
+            }
+        }
+
+        document.write("<br>O número de pessoas maiores de idade é: " + contadorMaiores);
+
+    </script>
     
 </body>
 </html>

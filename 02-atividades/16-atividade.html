@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Reajuste do saldo de 1,5%</title>
 </head>
 <body>
     
+    <h1>Reajuste do saldo de 1,5%</h1>
+
+    <script>
+        /*Leitura do saldo*/
+        let saldo = parseFloat(prompt("Qual é o valor do seu saldo? <br>Ex: 1500,00").replace(",", "."))
+
+        /*Cálculo do reajuste de 1,5%*/
+        let reajuste = saldo * 0.015
+        let novoSaldo = saldo + reajuste
+
+        /*Exibir os resultados*/
+        document.write("Saldo atual: R$ " + saldo.toFixed(2).replace(".", ","))
+        document.write("<br>Reajuste de 1,5%: R$ " + reajuste.toFixed(2).replace(".", ","))
+        document.write("<br><strong>Novo saldo: R$ " + novoSaldo.toFixed(2).replace(".", ",") + "</strong>")
+    </script>
+
 </body>
 </html>

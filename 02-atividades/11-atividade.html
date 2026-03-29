@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Classe Eleitorar por idade</title>
 </head>
 <body>
     
+    <h1>Classe Eleitoral por Idade</h1>
+
+    <script>
+        let idade = parseInt(prompt("Digite a sua idade:"))
+        document.write("Sua idade é: " + idade + "<br>")
+
+        if (idade < 16) {
+            document.write("Você é um eleitor não obrigatório.")
+        } else if (idade >= 16 && idade < 18) {
+            document.write("Você é um eleitor facultativo.")
+        } else if (idade >= 18 && idade <= 64) {
+            document.write("Você é um eleitor obrigatório.")
+        } else if (idade >= 65) {
+            document.write("Você é um eleitor facultativo.")
+        } else {
+            document.write("Idade inválida.")
+        }
+    </script> 
 </body>
 </html>
