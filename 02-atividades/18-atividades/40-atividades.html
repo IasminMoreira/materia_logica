@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ar puro, finalmente</title>
+</head>
+<body>
+    
+    <h1>Ar puro, finalmente</h1>
+
+    <script>
+        let nome = prompt("Qual o seu nome?")
+        let continuar = "Sim"
+        let menorValor = -1
+        let menorEmpresa = ""
+
+        while (continuar.toLowerCase() === "sim") {
+            let empresa = prompt("Qual o nome da empresa?")
+            let valorPorAparelho = parseFloat(prompt("Qual o valor por aparelho?"))
+            let quantidade = parseInt(prompt("Qual a quantidade de aparelhos?"))
+            let desconto = parseFloat(prompt("Qual o desconto em porcentagem?"))
+            let minimoAparelhos = parseInt(prompt("Qual o número mínimo de aparelhos para obter o desconto?"))
+
+            let total = valorPorAparelho * quantidade
+
+            if (quantidade >= minimoAparelhos) {
+                total = total - (total * desconto / 100)
+            }
+
+            document.write("O serviço de " + empresa + " custará R$ " + total.toFixed(2) + "<br>")
+
+            if (menorValor === -1 || total < menorValor) {
+                menorValor = total
+                menorEmpresa = empresa
+            }
+
+            continuar = prompt("Deseja informar novos dados, " + nome + "? (Sim/Não)")
+        }
+
+        document.write("<br>O orçamento de menor valor é o de " + menorEmpresa + " por R$ " + menorValor.toFixed(2))
+        
+    </script>
+
+</body>
+</html>

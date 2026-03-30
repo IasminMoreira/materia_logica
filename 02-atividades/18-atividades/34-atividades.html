@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Com "S" ou Com "Z"?</title>
+</head>
+<body>
+    
+    <h1>Com "S" ou Com "Z"?</h1>
+    
+    <script>
+        
+        let hospedes = []
+        let opcao = ""
+    
+        while (opcao !== "3") {
+        
+            opcao = prompt("Selecione uma opção: 1. Cadastrar - 2. Pesquisar - 3. Sair")
+        
+            switch (opcao) {
+                case "1":
+                if (hospedes.length >= 15) {
+                    document.write("Máximo de cadastros atingido.<br>")
+                } else {
+                    let nomeNovo = prompt("Qual o nome do Hóspede?")
+                    hospedes.push(nomeNovo)
+                    document.write("Hóspede " + nomeNovo + " foi cadastrado(a) com sucesso!<br>")
+                }
+                break
+                case "2":
+                let nomeBusca = prompt("Qual o nome do Hóspede?")
+                let encontrado = false
+                for (let i = 0; i < hospedes.length; i++) {
+                    if (hospedes[i] === nomeBusca) {
+                        encontrado = true
+                        break
+                    }
+                }
+                if (encontrado) {
+                    document.write("Hóspede " + nomeBusca + " foi encontrado(a)!<br>")
+                } else {
+                    document.write("Hóspede " + nomeBusca + " não foi encontrado(a)!<br>")
+                }
+                break
+                case "3":
+                document.write("<br>Sistema encerrado.")
+                break
+                default:
+                document.write("Opção inválida. Tente novamente.<br>")
+            }
+        }
+    </script>
+
+</body>
+</html>

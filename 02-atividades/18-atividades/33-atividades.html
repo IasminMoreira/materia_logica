@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como soletrar?</title>
+</head>
+<body>
+    
+    <h1>Como soletrar?</h1>
+
+    <script>
+
+    let nome = prompt("Qual o seu nome?");
+    let dias = parseInt(prompt("Quantos dias você vai ficar?"));
+    let valorDiaria = parseFloat(prompt("Digite o valor da diária:"));
+    let valorTotal = 0
+    let contadorGratuidades = 0
+    let contadorMeias = 0
+
+    for (let i = 1; i <= 100; i++) {
+        let nomeHospede = prompt("Qual o nome do Hóspede?")
+
+        if (nomeHospede.toLowerCase() === "pare") {
+            break
+        }
+
+        let idade = parseInt(prompt("Qual a idade do Hóspede?"))
+
+        if (idade <= 6) {                          // ✅ era < 6
+            contadorGratuidades++
+            document.write("Hóspede " + nomeHospede + " tem direito à gratuidade.<br>")
+        } else if (idade > 60) {
+            contadorMeias++
+            valorTotal += valorDiaria / 2
+            document.write("Hóspede " + nomeHospede + " tem direito à meia diária.<br>")
+        } else {
+            valorTotal += valorDiaria
+            document.write("Hóspede " + nomeHospede + " não tem direito a desconto.<br>")
+        }
+    }
+
+    document.write("<br>Valor total da estadia: R$ " + valorTotal.toFixed(2) + "<br>")
+    document.write("Número de gratuidades: " + contadorGratuidades + "<br>")
+    document.write("Número de meias-diárias: " + contadorMeias + "<br>")
+
+</script>
+
+</body>
+</html>

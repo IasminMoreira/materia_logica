@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa ou Trabalho?</title>
+</head>
+<body>
+    
+    <h1>Festa ou Trabalho?</h1>
+
+    <script>
+        let nome = prompt("Qual o seu nome?")
+        let horas = parseFloat(prompt("Qual a duração do evento em horas?"))
+        let garcons = parseInt(prompt("Quantos garçons serão necessários?"))
+
+        let custoTotal = garcons * horas * 10.50
+
+        document.write("Custo total: R$ " + custoTotal.toFixed(2) + "<br>")
+
+        let confirmacao = prompt("Gostaria de efetuar a reserva? S/N")
+
+        if (confirmacao.toUpperCase() === "S") {
+            document.write(nome + ", reserva efetuada com sucesso!")
+        } else {
+            document.write("Reserva não efetuada.")
+        }
+    </script>
+    
+</body>
+</html>

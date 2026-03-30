@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de dolar para real</title>
+</head>
+<body>
+    
+    <h1>Conversor de Dólar para Real</h1>
+
+    <script>
+        let valorDolar = parseFloat(prompt("Digite o valor em dólar:"));
+        let cotacaoDolar = parseFloat(prompt("Digite a cotação do dólar:"));
+
+        let valorReal = valorDolar * cotacaoDolar;
+
+        document.write("Valor em dólar: " + valorDolar + "<br>");
+        document.write("Cotação do dólar: " + cotacaoDolar + "<br>");
+        document.write("Valor em real: " + valorReal.toFixed(2));
+
+    </script>
+</body>
+</html>

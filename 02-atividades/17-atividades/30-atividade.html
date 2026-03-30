@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador de Sequência</title>
+</head>
+<body>
+
+    <h1>Somador de Sequência</h1>
+    
+    <script>
+        let soma = 0
+
+        for (let i = 1; i <= 100; i++){
+            let numero = parseInt(prompt("Digite um número:"))
+            if (numero < 0) {
+                break
+            }
+            soma += numero
+        }
+
+        document.write("A soma dos números digitados é: " + soma)
+    </script>
+
+</body>
+</html>
