@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão Segura</title>
+</head>
+<body>
+    
+    <h1>Divisão Segura</h1>
+
+    <!--se o segundo número for zero ou negativo, pede para o usuário digitar novamente-->
+    <script>
+        let numero1 = parseFloat(prompt("Digite o primeiro número:"))
+        let numero2 = parseFloat(prompt("Digite o segundo número:"))
+
+        while (numero2 <= 0) {
+            numero2 = parseFloat(prompt("O segundo número deve ser positivo. Digite novamente:"))
+        }
+
+        document.write("O primeiro número é: " + numero1 + "<br>")
+        document.write("O segundo número é: " + numero2 + "<br>")
+        let resultado = numero1 / numero2
+        document.write("O resultado da divisão é: " + resultado)
+
+    </script>
+
+</body>
+</html>

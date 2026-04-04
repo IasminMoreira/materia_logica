@@ -1,0 +1,48 @@
+body{
+    text-align: center;
+}
+
+img{
+    width: 250px;
+    height: 200px;
+    margin: 30px;
+}
+
+div{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    border: 5px solid;
+    padding: 10px;
+    font-size: 14px;
+    text-align: justify;
+    top: 350px;
+    left: 750px;
+    visibility: hidden; /*ocultar as camadas*/
+}
+
+div img {
+    width: 100px;
+    height: 80px;
+    margin: 10px;
+    float: left;
+}
+
+#camada1{
+    background-color: rgb(125, 163, 234);
+    color: #fff;
+    border-color: #898;
+}
+
+#camada2{
+    background-color: rgb(234, 125, 125);
+    color: #fff;
+    border-color: #898;
+}
+
+#camada3{
+    background-color: rgb(248, 208, 134);
+    color: #fff;
+    border-color: #898;
+}
+
