@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+</head>
+<body>
+    
+    <h1>Hotel</h1>
+
+    <script>
+
+    let nome = prompt("Qual o seu nome?");
+    let valorDiaria = parseFloat(prompt("Qual o valor da diária?"));
+    let dias = parseInt(prompt("Quantos dias você vai ficar?"));
+
+    if (valorDiaria < 0 || dias < 0 || dias > 30) {
+        document.write("Valor inválido, " + nome)
+    } else {
+        let valorTotal = valorDiaria * dias;
+        document.write("O valor total da sua estadia é: R$ " + valorTotal.toFixed(2) + ", " + nome)
+        
+        let nomeHospede = prompt("Digite o nome do hóspede:")
+        let confirmacao = prompt(nome + ", você confirma a hospedagem para " + nomeHospede + " por " + dias + " dias? (sim/não)")
+
+        if (confirmacao.toLowerCase() === "sim") {
+            document.write("<br>Reserva confirmada para " + nomeHospede + " por " + dias + " dias.")
+        } else {
+            document.write("<br>Reserva cancelada.")
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Crédito</title>
+</head>
+<body>
+    <h1>Calculadora de Crédito</h1>
+
+    <script>
+
+        let saldo = parseInt(prompt("Qual é o seu saldo médio no último ano?"))
+        document.write("Seu Saldo médio: " + saldo)
+        let credito = 0;
+        
+        if (saldo >= 0 && saldo <= 500) {
+            credito = 0
+        }
+        else if (saldo >= 501 && saldo <= 1000) {
+            credito = saldo * 0.30
+        } else if (saldo >= 1001 && saldo <= 3000) {
+            credito = saldo * 0.40
+        } else if (saldo >= 3001) {
+            credito = saldo * 0.50
+        }
+
+        document.write("<br>Valor do crédito: " + credito.toFixed(2))
+
+    </script>
+
+</body>
+</html>

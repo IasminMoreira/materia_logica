@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem é o mais novo?</title>
+</head>
+<body>
+    
+    <h1>Quem é o mais novo?</h1>
+
+    <script>
+        // infinity é um valor especial que representa o infinito, ou seja, um valor maior do que qualquer outro número
+        let idadeMaisNova = Infinity;
+        let pessoaMaisNova = "";
+
+        for (let i = 1; i <= 10; i++) {
+            let nome = prompt("Digite o nome da pessoa " + i + ":");
+            let idade = parseInt(prompt("Digite a idade da pessoa " + i + ":"));
+            document.write("Nome da pessoa " + i + ": " + nome + "<br>");
+            document.write("Idade da pessoa " + i + ": " + idade + "<br><br>");
+
+            if (idade < idadeMaisNova) {
+                idadeMaisNova = idade;
+                pessoaMaisNova = nome;
+            }
+        }
+
+        document.write("A pessoa mais nova é: " + pessoaMaisNova + " com " + idadeMaisNova + " anos.");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salários Mínimos</title>
+</head>
+<body>
+    
+    <h1>Calculadora de Salários Mínimos</h1>
+
+    <script>
+        /*Leitura dos valores*/
+        let salarioMinimo = 1212.00
+        let salarioUsuario = parseFloat(prompt("Qual é o valor o seu salário? <br>Ex: 2364,00").replace(",", "."))
+
+        /*Cálculo da quantidade de salários mínimos*/
+        let quantidadeSM = salarioUsuario / salarioMinimo
+
+        /*Exibir os resultados*/
+        document.write("Salário mínimo: R$ " + salarioMinimo.toFixed(2).replace(".", ","))
+        document.write("<br>Seu salário: R$ " + salarioUsuario.toFixed(2).replace(".", ","))
+        document.write("<br>1 salário mínimo equivale a: R$ " + salarioMinimo.toFixed(2).replace(".", ","))
+        /*Math.floor arredonda o valor para baixo*/
+        document.write("<br><br><strong>Você ganha " + Math.floor(quantidadeSM) + " salários mínimos.</strong>")
+
+    </script>
+</body>
+</html>

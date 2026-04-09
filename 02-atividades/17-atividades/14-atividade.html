@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IPI</title>
+</head>
+<body>
+    
+    <h1>Calculadora de IPI</h1>
+
+    <script>
+        /*Porcentagem do IPI*/
+        let ipi = parseFloat(prompt("Qual é a porcentagem do IPI? <br>Ex: 10 para 10%"))
+
+        /*Dados da peça 1*/
+        let codigo1 = prompt("Qual é o código da peça 1? <br>Ex: ABC123")
+        let valorUnitario1 = parseFloat(prompt("Qual é o valor unitário da peça 1? <br>Ex: 50,00").replace(",", "."))
+        let quantidade1 = parseInt(prompt("Qual é a quantidade da peça 1? <br>Ex: 3"))
+
+        /*Dados da peça 2*/
+        let codigo2 = prompt("Qual é o código da peça 2? <br>Ex: XYZ456")
+        let valorUnitario2 = parseFloat(prompt("Qual é o valor unitário da peça 2? <br>Ex: 80,00").replace(",", "."))
+        let quantidade2 = parseInt(prompt("Qual é a quantidade da peça 2? <br>Ex: 2"))
+
+        /*Cálculo do valor total com IPI*/
+        let totalPeca1 = (valorUnitario1 * quantidade1) * (1 + ipi / 100)
+        let totalPeca2 = (valorUnitario2 * quantidade2) * (1 + ipi / 100)
+
+        /*Cálculo do valor total a ser pago*/
+        let totalGeral = (valorUnitario1 * quantidade1 + valorUnitario2 * quantidade2) * (ipi / 100 + 1)
+
+        /*Exibir os resultados*/
+        document.write("IPI: " + ipi + "%")
+
+        document.write("<br><br>Peça 1")
+        document.write("<br>Código: " + codigo1)
+        document.write("<br>Valor unitário: R$ " + valorUnitario1.toFixed(2).replace(".", ","))
+        document.write("<br>Quantidade: " + quantidade1)
+        document.write("<br>Total com IPI: R$ " + totalPeca1.toFixed(2).replace(".", ","))
+
+        document.write("<br><br>Peça 2")
+        document.write("<br>Código: " + codigo2)
+        document.write("<br>Valor unitário: R$ " + valorUnitario2.toFixed(2).replace(".", ","))
+        document.write("<br>Quantidade: " + quantidade2)
+        document.write("<br>Total com IPI: R$ " + totalPeca2.toFixed(2).replace(".", ","))
+
+        document.write("<br><br><strong>Total a ser pago: R$ " + totalGeral.toFixed(2).replace(".", ",") + "</strong>")
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantos foram Aprovados?</title>
+</head>
+<body>
+    
+    <h1>Quantos foram Aprovados?</h1>
+
+    <!-- 
+        Escreva um programa que leia a quantidade de alunos de uma turma e, em seguida, leia as notas de cada aluno. O programa deve calcular a média de cada aluno e contar quantos alunos foram aprovados (média maior ou igual a 9.5) quando calcular de 1 aluno o sistema pergunta se quer calcular do próximo aluno. Por fim, o programa deve exibir a quantidade de alunos aprovados.
+     -->
+    <script>
+        let continuar = "Sim"
+        let quantidadeAlunos = 0
+        let quantidadeAprovados = 0
+
+        while (continuar.toLowerCase() === "sim") {
+            let nota1 = parseFloat(prompt("Digite a primeira nota do aluno:"))
+            let nota2 = parseFloat(prompt("Digite a segunda nota do aluno:"))
+            let media = (nota1 + nota2) / 2
+
+            if (media >= 9.5) {
+                quantidadeAprovados++
+            }
+
+            quantidadeAlunos++
+            continuar = prompt("Deseja calcular a média do próximo aluno? (Sim/Não)")
+        }
+
+        document.write("Quantidade de alunos aprovados: " + quantidadeAprovados)
+
+    </script>
+</body>
+</html>

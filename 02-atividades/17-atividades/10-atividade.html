@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <h1>Ordenando Letras</h1>
+    
+    <script>
+        let a = parseInt(prompt("Digite o valor de A:"))
+
+        let b = parseInt(prompt("Digite o valor de B:"))
+
+        let c = parseInt(prompt("Digite o valor de C:"))
+
+        if (a >= b && a >= c) {
+            if (b >= c) {
+                document.write("Ordem decrescente: B=" + b + ", A=" + a + ", C=" + c)
+            } else {
+                document.write("Ordem decrescente: C=" + c + ", A=" + a + ", B=" + b)
+            }
+        } else if (b >= a && b >= c) {
+            if (a >= c) {
+                document.write("Ordem decrescente: B=" + b + ", A=" + a + ", C=" + c)
+            } else {
+                document.write("Ordem decrescente: C=" + c + ", B=" + b + ", A=" + a)
+            }
+        } else {
+            if (a >= b) {
+                document.write("Ordem decrescente: C=" + c + ", A=" + a + ", B=" + b)
+            } else {
+                document.write("Ordem decrescente: C=" + c + ", B=" + b + ", A=" + a)
+            }
+        }
+
+    </script>
+
+</body>
+</html>

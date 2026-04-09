@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de comer</title>
+</head>
+<body>
+    
+    <h1>Hora de comer</h1>
+
+    <script>
+
+        let nome = prompt("Qual o seu nome?")
+        let convidados = parseInt(prompt("Qual o número de convidados para o evento?"))
+
+        if (convidados > 350) {
+            document.write("Quantidade de convidados superior à capacidade máxima.")
+        } else {
+            let cafe = convidados * 0.2
+            let agua = convidados * 0.5
+            let salgados = convidados * 7
+
+            let custoCafe = cafe * 0.80
+            let custoAgua = agua * 0.40
+            let custoSalgados = (salgados / 100) * 34
+
+            let custoTotal = custoCafe + custoAgua + custoSalgados
+            
+            document.write("O evento precisará de " + cafe + " litros de café, " + agua + " litros de água, " + salgados + " salgados.<br>")
+            document.write("O custo total do evento será de R$ " + custoTotal.toFixed(2) + "<br>")
+
+            let confirmacao = prompt("Gostaria de efetuar a reserva? S/N")
+            
+            if (confirmacao.toUpperCase() === "S") {
+                document.write(nome + ", reserva efetuada com sucesso!")
+            } else {
+                document.write("Reserva não efetuada.")
+            }
+        }
+    </script>
+    
+</body>
+</html>

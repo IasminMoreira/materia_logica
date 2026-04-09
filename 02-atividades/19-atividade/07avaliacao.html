@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantos foram Aprovados?</title>
+</head>
+<body>
+    
+    <h1>Quantos foram Aprovados?</h1>
+
+    <!--Ler as 6 notas do aluno, se alguma nota for inválida, pedir para digitar novamente. Calcular a média e imprimir o resultado do aluno-->
+    <script>
+        let soma = 0
+        let quantidade = 0
+
+        for (let i = 1; i <= 6; i++) {
+            let nota = parseFloat(prompt("Digite a nota " + i + ":"))
+
+            while (nota < 0 || nota > 10) {
+                nota = parseFloat(prompt("Nota inválida. Digite a nota " + i + " novamente:"))
+            }
+
+            soma += nota
+            quantidade++
+        }
+
+        let media = soma / quantidade
+
+        if (media >= 7) {
+            document.write("O aluno foi aprovado com média: " + media)
+        } else {
+            document.write("O aluno foi reprovado com média: " + media)
+        }
+
+    </script>
+</body>
+</html>

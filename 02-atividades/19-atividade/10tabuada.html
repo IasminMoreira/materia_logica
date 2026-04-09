@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada de 1 a número escolhido</title>
+</head>
+<body>
+    
+    <h1>Tabuada de 1 a número escolhido</h1>
+
+    <!--Todas as tabuadas de 1 a 10 com o número escolhido-->
+    <script>
+        let numero = parseInt(prompt("Digite o número para o qual deseja ver a tabuada:"))
+        
+        for (let i = 1; i <= numero; i++) {
+            // tabuada do i
+            
+            for (let j = 1; j <= 10; j++) {
+                
+                document.write(i + " x " + j + " = " + (i * j) + "<br>")
+            }
+        }
+    </script>
+</body>
+</html>

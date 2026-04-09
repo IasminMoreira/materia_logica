@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Celsius para Fahrenheit</title>
+</head>
+<body>
+    <h1>Conversor de Celsius para Fahrenheit</h1>
+
+    <script>
+        /*Leitura da temperatura em Celsius*/
+        let celsius = parseFloat(prompt("Digite a temperatura em Celsius:").replace(",", "."))
+
+        /*Cálculo da temperatura em Fahrenheit*/
+        let fahrenheit = (9 * celsius + 160) / 5
+
+        /*Exibir os resultados*/
+        document.write("Temperatura em Celsius: " + celsius.toFixed(2).replace(".", ",") + " °C")
+        document.write("<br><strong>Temperatura equivalente em Fahrenheit: " + fahrenheit.toFixed(2).replace(".", ",") + " °F</strong>")
+    </script>
+
+</body>
+</html>

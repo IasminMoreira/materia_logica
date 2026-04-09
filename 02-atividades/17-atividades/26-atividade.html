@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números maiores do que 8</title>
+</head>
+<body>
+    
+    <h1>Números maiores do que 8</h1>
+
+    <script>
+
+        let contadorMaiores = 0;
+
+        for (let i = 1; i <= 20; i++) {
+            let numero = parseInt(prompt("Digite o número " + i + ":"));
+            document.write("Número " + i + ": " + numero + "<br>");
+
+            if (numero > 8) {
+                document.write("O número " + numero + " é maior do que 8.<br><br>");
+                contadorMaiores++;
+            } else {
+                document.write("O número " + numero + " não é maior do que 8.<br><br>");
+            }
+        }
+
+        document.write("<br>O número de números maiores do que 8 é: " + contadorMaiores);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que horas você pode?</title>
+</head>
+<body>
+    
+    <h1>Que horas você pode?</h1>
+
+    <script>
+
+        let dia = prompt("Qual o dia do seu evento?").toLocaleLowerCase()
+        let hora = parseInt(prompt("Qual a hora do seu evento?"))
+        let disponivel = false
+
+        switch (dia) {
+            case "segunda":
+            case "terça":
+            case "quarta":
+            case "quinta":
+            case "sexta":
+                if (hora >= 7 && hora <= 23) {
+                    disponivel = true
+                }
+                break
+            case "sábado":
+            case "domingo":
+                if (hora >= 7 && hora <= 15) {
+                    disponivel = true
+                }
+                break
+            default:
+                document.write("Dia inválido.")
+        }
+
+        if (disponivel) {
+            let empresa = prompt ("Qual o nome da empresa?")
+            document.write("Restaurante reservado para " + empresa + ", " + dia + " às " + hora + "horas.")
+        } else {
+            document.write("Desculpe, o restaurante não está disponível nesse horário.")
+        }
+
+    </script>
+</body>
+</html>

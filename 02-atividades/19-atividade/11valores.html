@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre 24 e 42?</title>
+</head>
+<body>
+    
+    <h1>Quais números estão entre 24 e 42?</h1>
+
+    <!--Usuário deve entrar com 10 números e o sistema deve identificar quais estão entre 24 e 42, depois escrever os números entre e os números fora-->
+    <script>
+
+        /*Esses são arrays para armazenar os números, array é uma estrutura de dados que permite armazenar múltiplos valores em uma única variável*/
+        let numeros = []
+        let entre = []
+        let fora = []
+
+        for (let i = 0; i < 10; i++) {
+            let numero = parseInt(prompt("Digite um número:"))
+            numeros.push(numero)
+        }
+
+        /*push é um método que adiciona um elemento ao final de um array*/
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] >= 24 && numeros[i] <= 42) {
+                entre.push(numeros[i])
+            } else {
+                fora.push(numeros[i])
+            }
+        }
+
+        /*join é um método que converte um array em uma string, separando os elementos com o caractere especificado*/
+        document.write("Números entre 24 e 42: " + entre.join(", ") + "<br>")
+        document.write("Quantidade entre 24 e 42: " + entre.length + "<br>")
+        document.write("Números fora de 24 e 42: " + fora.join(", ") + "<br>")
+        document.write("Quantidade fora: " + fora.length)
+
+    </script>
+</body>
+</html>

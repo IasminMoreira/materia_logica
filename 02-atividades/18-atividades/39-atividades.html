@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álcool ou gasolina</title>
+</head>
+<body>
+    
+    <h1>Álcool ou gasolina</h1>
+
+    <script>
+
+        let alcoolWayne = parseFloat(prompt("Qual o preço do álcool no posto do Wayne Oil?"))
+        let gasolinaWayne = parseFloat(prompt("Qual o preço da gasolina no posto do Wayne Oil?"))
+
+        let alcoolStark = parseFloat(prompt("Qual o preço do álcool no posto do Stark Petrol?"))
+        let gasolinaStark = parseFloat(prompt("Qual o preço da gasolina no posto do Stark Petrol?"))
+
+        let tanque = 42
+
+        let melhorCombustivelWayne = ""
+        let melhorPrecoWayne = 0
+
+        if (alcoolWayne <= gasolinaWayne * 0.7) {
+            melhorCombustivelWayne = "álcool"
+            melhorPrecoWayne = alcoolWayne * tanque
+        } else {
+            melhorCombustivelWayne = "gasolina"
+            melhorPrecoWayne = gasolinaWayne * tanque
+        }
+
+        let melhorCombustivelStark = ""
+        let melhorPrecoStark = 0
+
+        if (alcoolStark <= gasolinaStark * 0.7) {
+            melhorCombustivelStark = "álcool"
+            melhorPrecoStark = alcoolStark * tanque
+        } else {
+            melhorCombustivelStark = "gasolina"
+            melhorPrecoStark = gasolinaStark * tanque
+        }
+
+        document.write("Custo no Wayne Oil: R$ " + melhorPrecoWayne.toFixed(2) + "<br>")
+        document.write("Custo no Stark Petrol: R$ " + melhorPrecoStark.toFixed(2) + "<br>")
+
+        if (melhorPrecoWayne <= melhorPrecoStark) {
+            document.write("É mais barato abastecer no posto do Wayne Oil com " + melhorCombustivelWayne)
+        } else {
+            document.write("É mais barato abastecer no posto do Stark Petrol com " + melhorCombustivelStark)
+        }
+
+    </script>
+
+</body>
+</html>

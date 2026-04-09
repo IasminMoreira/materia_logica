@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule a Média Aritmética</title>
+</head>
+<body>
+    
+    <h1>Calcule a Média Aritmética</h1>
+
+    <script>
+        let numero1 = parseFloat(prompt("Digite o primeiro número:"))
+        let numero2 = parseFloat(prompt("Digite o segundo número:"))
+        let soma = 0
+        let quantidade = 0
+
+        for (let i = numero1; i <= numero2; i++) {
+            soma += i
+            quantidade++
+        }
+
+        let media = soma / quantidade
+        document.write("A média aritmética dos números de " + numero1 + " até " + numero2 + " é: " + media)
+
+    </script>
+</body>
+</html>
