@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é o divisor?</title>
+</head>
+<body>
+    
+    <h1>Qual é o divisor desse número?</h1>
+
+    <!--Ler um número inteiro positivo e exibir todos os seus divisores usando while.-->
+
+    <script>
+
+    let divi = 1
+    let n = parseInt(prompt("Digite um número:"))
+        
+    while (divi <= n) {
+        if (n % divi === 0) {
+            document.write(divi + " é divisor de " + n + "<br>")
+        }
+        divi++
+    }
+    
+    </script>
+</body>
+</html>
