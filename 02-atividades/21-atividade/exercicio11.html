@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 11</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 11 - Soma dos positivos e negativos
+    let numeros = []
+    let somaPositivos = 0
+    let somaNegativos = 0
+
+    for (let i = 0; i < 10; i++) {
+      numeros[i] = parseInt(prompt(`Digite o número ${i + 1}:`))
+    }
+
+    for (let i = 0; i < 10; i++) {
+      if (numeros[i] > 0) {
+        somaPositivos += numeros[i]
+      } else if (numeros[i] < 0) {
+        somaNegativos += numeros[i]
+      }
+    }
+
+    document.write("<h2>Soma dos positivos: " + somaPositivos + "<br>Soma dos negativos: " + somaNegativos + "</h2>")
+  </script>
+
+</body>
+</html>

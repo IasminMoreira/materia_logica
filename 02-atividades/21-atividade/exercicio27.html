@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 27</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 27 - Diagonal secundária (onde i + j == n - 1)
+    let matriz = []
+    let produto = 1
+
+    for (let i = 0; i < 3; i++) {
+      matriz[i] = []
+      for (let j = 0; j < 3; j++) {
+        matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`))
+      }
+    }
+
+    for (let i = 0; i < 3; i++) {
+      produto *= matriz[i][2 - i]  // diagonal secundária: j = (n-1) - i
+    }
+
+    document.write("<h2>Produto da diagonal secundária: " + produto + "</h2>")
+  </script>
+
+</body>
+</html>

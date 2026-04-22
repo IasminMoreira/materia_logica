@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 9</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 09 - Positivos e negativos
+    let numeros = []
+    let qtdPositivos = 0
+    let qtdNegativos = 0
+
+    for (let i = 0; i < 10; i++) {
+      numeros[i] = parseInt(prompt(`Digite o número ${i + 1}:`))
+    }
+
+    for (let i = 0; i < 10; i++) {
+      if (numeros[i] > 0) {
+        qtdPositivos++
+      } else if (numeros[i] < 0) {
+        qtdNegativos++
+      }
+    }
+
+    document.write("<h2>Positivos: " + qtdPositivos + "</h2><br>Negativos: " + qtdNegativos)
+  </script>
+
+</body>
+</html>

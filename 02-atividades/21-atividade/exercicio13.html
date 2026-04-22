@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 13</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 13 - Intervalo de 10 a 50
+    let numeros = []
+    let qtd = 0
+
+    for (let i = 0; i < 10; i++) {
+      numeros[i] = parseInt(prompt(`Digite o número ${i + 1}:`))
+    }
+
+    for (let i = 0; i < 10; i++) {
+      if (numeros[i] >= 10 && numeros[i] <= 50) {
+        qtd++
+      }
+    }
+
+    document.write("<h2>Números entre 10 e 50: " + qtd + "</h2>")
+  </script>
+
+</body>
+</html>

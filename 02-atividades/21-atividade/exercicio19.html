@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 19</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 19 - Soma de duas matrizes 2x2
+    let matrizA = [], matrizB = [], matrizC = []
+
+    for (let i = 0; i < 2; i++) {
+      matrizA[i] = []
+      for (let j = 0; j < 2; j++) {
+        matrizA[i][j] = parseInt(prompt(`Matriz A - elemento [${i}][${j}]:`))
+      }
+    }
+
+    for (let i = 0; i < 2; i++) {
+      matrizB[i] = []
+      for (let j = 0; j < 2; j++) {
+        matrizB[i][j] = parseInt(prompt(`Matriz B - elemento [${i}][${j}]:`))
+      }
+    }
+
+    document.write("<h2>Soma das matrizes (A + B):</h2>")
+
+    for (let i = 0; i < 2; i++) {
+      matrizC[i] = []
+      for (let j = 0; j < 2; j++) {
+        matrizC[i][j] = matrizA[i][j] + matrizB[i][j]
+        document.write(matrizC[i][j] + " ")
+      }
+      document.write("<br>")
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 15</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 15 - Nomes em ordem alfabética
+    let nomes = []
+
+    for (let i = 0; i < 5; i++) {
+      nomes[i] = prompt(`Digite o nome ${i + 1}:`)
+    }
+
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 4 - i; j++) {
+        if (nomes[j] > nomes[j + 1]) {
+          let temp = nomes[j]
+          nomes[j] = nomes[j + 1]
+          nomes[j + 1] = temp
+        }
+      }
+    }
+
+    document.write("<h2>Nomes em ordem alfabética:</h2>")
+
+    for (let i = 0; i < 5; i++) {
+      document.write(nomes[i] + "<br>")
+    }
+
+  </script>
+
+</body>
+</html>

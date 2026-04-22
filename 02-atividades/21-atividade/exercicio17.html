@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 17</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 17 - Soma dos elementos da matriz 2x2
+    let matriz = []
+    let soma = 0
+
+    for (let i = 0; i < 2; i++) {
+      matriz[i] = []
+      for (let j = 0; j < 2; j++) {
+        matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`))
+        soma += matriz[i][j]
+      }
+    }
+    
+    document.write("<h2>Soma de todos os elementos: " + soma + "</h2>")
+  </script>
+
+</body>
+</html>

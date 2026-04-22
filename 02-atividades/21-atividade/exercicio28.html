@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 28</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 28 - Maior valor por linha na matriz 4x4
+    let matriz = []
+
+    for (let i = 0; i < 4; i++) {
+      matriz[i] = []
+      for (let j = 0; j < 4; j++) {
+        matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`))
+      }
+    }
+
+    document.write("<h2>Maior valor por linha:</h2>")
+
+    for (let i = 0; i < 4; i++) {
+      let maiorLinha = matriz[i][0]
+      for (let j = 1; j < 4; j++) {
+        if (matriz[i][j] > maiorLinha) {
+          maiorLinha = matriz[i][j]
+        }
+      }
+      document.write("Linha " + i + ": " + maiorLinha + "<br>")
+    }
+  </script>
+
+</body>
+</html>

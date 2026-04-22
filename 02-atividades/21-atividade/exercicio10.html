@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 10</title>
+</head>
+<body>
+
+  <script>
+    
+    // Exercício 10 - Verificar zero
+    let numeros = []
+    let temZero = false
+
+    for (let i = 0; i < 5; i++) {
+      numeros[i] = parseInt(prompt(`Digite o número ${i + 1}:`))
+    }
+
+    for (let i = 0; i < 5; i++) {
+      if (numeros[i] == 0) {
+        temZero = true
+      }
+    }
+
+    if (temZero) {
+      document.write("<h2>Sim, há pelo menos um número igual a zero.</h2>")
+    } else {
+      document.write("<h2>Nenhum número é igual a zero.</h2>")
+    }
+  
+  </script>
+
+</body>
+</html>

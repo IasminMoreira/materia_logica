@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 26</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 26 - Verificar igualdade entre matrizes 2x2
+    let matrizA = [], matrizB = []
+    let iguais = true
+
+    for (let i = 0; i < 2; i++) {
+      matrizA[i] = []
+      for (let j = 0; j < 2; j++) {
+        matrizA[i][j] = parseInt(prompt(`Matriz A [${i}][${j}]:`))
+      }
+    }
+
+    for (let i = 0; i < 2; i++) {
+      matrizB[i] = []
+      for (let j = 0; j < 2; j++) {
+        matrizB[i][j] = parseInt(prompt(`Matriz B [${i}][${j}]:`))
+      }
+    }
+
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < 2; j++) {
+        if (matrizA[i][j] != matrizB[i][j]) {
+          iguais = false
+        }
+      }
+    }
+
+    if (iguais) {
+      document.write("<h2>As matrizes SÃO iguais.</h2>")
+    } else {
+      document.write("<h2>As matrizes NÃO são iguais.</h2>")
+    }
+  </script>
+
+</body>
+</html>

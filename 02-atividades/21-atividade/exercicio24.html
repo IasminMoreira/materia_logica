@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 24</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 24 - Matriz simétrica (A == transposta de A, ou seja A[i][j] == A[j][i])
+    let matriz = []
+    let simetrica = true
+
+    for (let i = 0; i < 3; i++) {
+      matriz[i] = []
+      for (let j = 0; j < 3; j++) {
+        matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`))
+      }
+    }
+
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        if (matriz[i][j] != matriz[j][i]) {
+          simetrica = false
+        }
+      }
+    }
+
+    if (simetrica) {
+      document.write("<h2>A matriz É simétrica.</h2>")
+    } else {
+      document.write("<h2>A matriz NÃO é simétrica.</h2>")
+    }
+  </script>
+
+</body>
+</html>

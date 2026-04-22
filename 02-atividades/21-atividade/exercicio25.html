@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 25</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 25 - Soma por coluna na matriz 4x4
+    let matriz = []
+
+    for (let i = 0; i < 4; i++) {
+      matriz[i] = []
+      for (let j = 0; j < 4; j++) {
+        matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`))
+      }
+    }
+
+    document.write("<h2>Soma por coluna:</h2>")
+
+    for (let j = 0; j < 4; j++) {
+      let somaColuna = 0
+      for (let i = 0; i < 4; i++) {
+        somaColuna += matriz[i][j]
+      }
+      document.write("Coluna " + j + ": " + somaColuna + "<br>")
+    }
+  </script>
+
+</body>
+</html>

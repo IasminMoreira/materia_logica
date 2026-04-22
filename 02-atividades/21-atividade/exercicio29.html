@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 29</title>
+</head>
+<body>
+
+  <script>
+    // Exercício 29 - Matriz identidade (diagonal principal = 1, resto = 0)
+    let matriz = []
+    let identidade = true
+
+    for (let i = 0; i < 3; i++) {
+      matriz[i] = []
+      for (let j = 0; j < 3; j++) {
+        matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`))
+      }
+    }
+
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        if (i == j && matriz[i][j] != 1) {
+          identidade = false
+        }
+        if (i != j && matriz[i][j] != 0) {
+          identidade = false
+        }
+      }
+    }
+    
+    if (identidade) {
+      document.write("<h2>É uma matriz identidade.</h2>")
+    } else {
+      document.write("<h2>NÃO é uma matriz identidade.</h2>")
+    }
+  </script>
+
+</body>
+</html>
