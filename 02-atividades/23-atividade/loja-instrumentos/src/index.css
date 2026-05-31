@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url('./assets/guitarra_fundo_body.jpg');
+  background-repeat: no-repeat;
+  font-size: 14px;
+}
+
+/* ── Header ── */
+.header {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background-image: url('./assets/guitarras_header.jpg');
+  background-size: cover;
+}
+
+.header__nav {
+  position: absolute;
+  display: flex;
+  width: 45%;
+  height: 60px;
+  flex-direction: row;
+  top: 65%;
+  left: 53%;
+  z-index: 2;
+}
+
+.header__nav a {
+  background-color: white;
+  color: #37272A;
+  text-decoration: none;
+  width: 20%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 13px;
+}
+
+.header__nav a:hover {
+  background-color: #37272A;
+  color: white;
+  transition: all 0.5s;
+}
+
+/* ── Seção Home ── */
+.home {
+  position: relative;
+  width: 100%;
+  background-color: #BA1211;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.home__texto {
+  padding: 30px;
+  width: 43%;
+  background-color: #BA8A8A;
+  color: white;
+}
+
+.home__texto h2 {
+  margin-bottom: 10px;
+}
+
+.home__texto p {
+  padding-top: 40px;
+  line-height: 1.8;
+}
+
+.home__imagem {
+  width: 43%;
+  height: 280px;
+}
+
+.home__imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Seção Produtos ── */
+.produtos {
+  position: relative;
+  width: 100%;
+  background-color: #F3FBFD;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.produto {
+  position: relative;
+  width: 20%;
+  min-width: 160px;
+  background-color: #F9FBFA;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 8px;
+}
+
+.produto img {
+  width: 50%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.produto__nome {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.produto__preco {
+  font-weight: bold;
+  color: #BD1826;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* ── Seção Endereço ── */
+.endereco {
+  position: relative;
+  background-color: #BA5511;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.endereco__mapa {
+  width: 43%;
+  min-width: 280px;
+  height: 270px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.endereco__mapa iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: block;
+}
+
+.endereco__texto {
+  width: 43%;
+  min-width: 240px;
+  color: #fff;
+  background-color: #BA8A8A;
+  padding: 30px;
+}
+
+.endereco__texto h2 {
+  margin-bottom: 10px;
+}
+
+.endereco__texto p {
+  padding-top: 40px;
+  line-height: 1.8;
+}
+
+/* ── Seção Contato ── */
+.contato {
+  position: relative;
+  width: 98%;
+  align-self: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contato__formulario {
+  width: 43%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contato__formulario label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.contato__formulario input {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contato__formulario textarea {
+  width: 60%;
+  height: 130px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 8px;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  resize: vertical;
+}
+
+.contato__formulario button {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 40px;
+  width: 98%;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white;
+}
+
+.contato__formulario button:hover {
+  background-color: #f0f0f0;
+}
+
+.contato__redes {
+  width: 43%;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #000277;
+  padding-top: 80px;
+}
+
+.contato__redes h2 {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contato__redes ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.contato__redes ul img {
+  width: 100px;
+  height: 100px;
+}
+
+/* ── Footer ── */
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 6px;
+}
+
+.footer h4 {
+  font-size: 14px;
+}
+
+.footer address {
+  font-style: normal;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer__redes {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.footer__redes img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ── Mensagens de feedback ── */
+.msg-sucesso {
+  background-color: #2d7a2d;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.msg-erro {
+  background-color: #BD1826;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+/* ── Responsivo mobile ── */
+@media only screen and (max-width: 480px) {
+  .header__nav {
+    width: 100%;
+    left: 0;
+    font-size: 12px;
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .home__texto,
+  .home__imagem {
+    width: 90%;
+  }
+
+  .produtos {
+    justify-content: space-around;
+  }
+
+  .produto {
+    width: 40%;
+  }
+
+  .endereco {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .endereco__mapa,
+  .endereco__texto {
+    width: 90%;
+  }
+
+  .contato {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contato__formulario,
+  .contato__redes {
+    width: 90%;
+  }
+
+  .footer__redes {
+    justify-content: center;
+  }
+}
